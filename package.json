@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "transactionHandler",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc --build --verbose",
+    "setup": "ts-node dist/setup.js",
+    "demoTransact": "ts-node dist/demoTransact.js",
+    "demoTransact:e2e": "npm run build && npm run setup && ts-node dist/demoTransact.js && npm run cleanup",
+    "demoRaceCondition": "ts-node dist/demoRaceCondition.js",
+    "demoRaceCondition:e2e": "npm run build && npm run setup && ts-node dist/demoRaceCondition.js && npm run cleanup",
+    "cleanup": "ts-node dist/cleanup.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.658.0",
+    "@aws-sdk/util-dynamodb": "^3.882.0",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
