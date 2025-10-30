@@ -56,13 +56,13 @@ A **transaction-safe wallet system** built with **TypeScript** and **DynamoDB**,
 ## File Structure
 ```bash
 src/
-├── client.ts → DynamoDB client (local/AWS switch)
+├── dbClient.ts → DynamoDB client (local/AWS switch)
 ├── setup.ts → Create table
 ├── cleanup.ts → Delete table
 ├── types.ts → Input interfaces
 ├── wallet.ts → getBalance() + transact()
-├── demo.ts → Basic flow
-└── raceConditionDemo.ts → Concurrency test
+├── demoTransact.ts → Basic flow
+└── demoRaceCondition.ts → Concurrency test
 .gitignore
 LICENSE
 package-lock.json
