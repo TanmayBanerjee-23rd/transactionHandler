@@ -54,7 +54,7 @@ A **transaction-safe wallet system** built with **TypeScript** and **DynamoDB**,
 ---
 
 ## File Structure
-
+```bash
 src/
 ├── client.ts → DynamoDB client (local/AWS switch)
 ├── setup.ts → Create table
@@ -69,6 +69,7 @@ package-lock.json
 package.json
 README.md
 tsconfig.json
+```
 
 ## Setup & Run
 
